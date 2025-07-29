@@ -1,0 +1,27 @@
+# Python cache and environments
+__pycache__/
+*.py[cod]
+env/
+venv/
+.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code settings
+.vscode/
+
+# Data files
+data/
+*.csv
+
+# GCP credentials
+gcs-key.json
+credentials.json
+
+# Log files
+*.log
+
+# Test files (optional)
+tests/
