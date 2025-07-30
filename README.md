@@ -2,7 +2,7 @@
 
 **Real-Time Weather & Air Quality Data Pipeline (GCP Free-Tier Project)**
 
-![Architecture](docs/architecture.png)
+![Architecture](architecture.png)
 
 ## 📌 Overview
 
