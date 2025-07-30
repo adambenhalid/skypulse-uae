@@ -21,20 +21,6 @@ This project is designed as a **portfolio-ready data engineering solution** buil
 * **Dashboarding:** Looker Studio
 * **Version Control:** GitHub
 
----
-
-## 📂 Project Architecture
-
-```mermaid
-graph TD
-    A[Open-Meteo API] --> B[fetch_data.py]
-    B --> C[clean_transform.py]
-    C --> D[Google Cloud Storage]
-    D --> E[load_to_bigquery.py]
-    E --> F[BigQuery: daily_readings]
-    F --> G[Looker Studio Dashboard]
-    H[Cloud Scheduler] --> B
-```
 
 ---
 
