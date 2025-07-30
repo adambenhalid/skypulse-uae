@@ -98,7 +98,7 @@ python main.py
 
 ## 📈 Example Dashboard (Looker Studio)
 
-![Dashboard](docs/dashboard.png)
+![Dashboard](dashboard.png)
 *Interactive Looker Studio dashboard displaying temperature & pollution trends across the UAE.*
 
 ---
