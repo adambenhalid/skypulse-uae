@@ -26,12 +26,12 @@ This project is designed as a **portfolio-ready data engineering solution** buil
 
 ## 📊 Features
 
-* ✅ **Automated daily ingestion** of UAE weather & air quality data
-* ✅ **Data cleaning & validation** (null checks, type enforcement, deduplication)
-* ✅ **Daily CSV snapshots** stored in Google Cloud Storage
-* ✅ **BigQuery integration** for scalable querying and analytics
-* ✅ **Scheduled orchestration** via Cloud Scheduler + Cloud Functions
-* ✅ **Interactive Looker Studio Dashboard** with daily pollution alerts & trends
+*  **Automated daily ingestion** of UAE weather & air quality data
+*  **Data cleaning & validation** (null checks, type enforcement, deduplication)
+*  **Daily CSV snapshots** stored in Google Cloud Storage
+*  **BigQuery integration** for scalable querying and analytics
+*  **Scheduled orchestration** via Cloud Scheduler + Cloud Functions
+*  **Interactive Looker Studio Dashboard** with daily pollution alerts & trends
 
 ---
 
