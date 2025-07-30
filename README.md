@@ -1,6 +1,6 @@
-# 🌍 SkyPulse UAE
+# SkyPulse UAE
 
-**Real-Time Weather & Air Quality Data Pipeline (GCP Free-Tier Project)**
+**Daily Weather & Air Quality Data Pipeline (GCP Free-Tier Project)**
 
 ![Architecture](architecture.png)
 
