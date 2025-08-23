@@ -35,39 +35,6 @@ This project is designed as a **portfolio-ready data engineering solution** buil
 
 ---
 
-## 🚀 Setup Instructions
-
-### 1️⃣ Clone the Repository
-
-```bash
-git clone https://github.com/adambenhalid/skypulse-uae.git
-cd skypulse-uae
-```
-
-### 2️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3️⃣ Configure GCP Credentials
-
-* Create a GCP Service Account JSON key
-* Save it as `gcs-key.json` in the root folder (not pushed to GitHub)
-* Authenticate locally:
-
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="gcs-key.json"
-```
-
-### 4️⃣ Run the Pipeline Locally
-
-```bash
-python main.py
-```
-
----
-
 ## 🗄️ BigQuery Schema
 
 | Column                 | Type      | Description                             |
