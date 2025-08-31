@@ -67,6 +67,74 @@ This project is designed as a **portfolio-ready data engineering solution** buil
 
 ---
 
+## 🚨 Alerting & Monitoring
+
+To ensure reliability and visibility of the pipeline, log-based alerting was implemented using Cloud Logging and Cloud Monitoring:
+
+🔍 Log-Based Metrics
+
+Two custom log-based metrics were defined:
+
+Function Errors
+
+Filter:
+
+resource.type="cloud_run_revision"
+resource.labels.service_name="uae-weather-etl-pipeline"
+severity="ERROR"
+
+
+Purpose: Captures any error logs from the Cloud Function (uae-weather-etl-pipeline).
+
+Cloud Function Failures (Custom Text Match)
+
+Filter:
+
+resource.type="cloud_run_revision"
+resource.labels.service_name="uae-weather-etl-pipeline"
+textPayload:"Cloud Function failed"
+
+
+Purpose: Specifically matches explicit failure messages in the function logs.
+
+⏰ Scheduler Failure Alerts
+
+A dedicated alert policy was created for the Cloud Scheduler job (uae-weather-daily-job):
+
+Filter:
+
+resource.type="cloud_scheduler_job"
+resource.labels.job_id="uae-weather-daily-job"
+severity="ERROR"
+
+
+Purpose: Triggers an alert when the Scheduler fails to invoke the daily Cloud Function.
+
+📩 Notifications
+
+Alerts are configured to send email notifications to the pipeline owner.
+
+Severity levels were assigned:
+
+Critical → Scheduler or Function failure
+
+Warning → Non-blocking errors
+
+⚡ Response Playbook
+
+When an alert is triggered:
+
+Inspect logs in Cloud Logging Explorer.
+
+If the error is Scheduler-related, manually trigger the job:
+
+gcloud scheduler jobs run uae-weather-daily-job \
+    --location=us-central1 \
+    --project=skypulse-uae
+
+
+If the error is from the Cloud Function, re-run it manually or re-deploy if needed.
+
 ## 🧑‍💻 Author
 
 **Adam Benhalid**
