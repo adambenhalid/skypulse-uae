@@ -14,11 +14,24 @@ logging.basicConfig(
 
 def run_pipeline():
     logging.info("🚀 Starting UAE Weather Data Pipeline")
+
+    logging.info("📥 Step 1: Fetching raw data from Open-Meteo API...")
     fetch_and_save_data()
+    logging.info("✅ Data fetched and saved locally.")
+
+    logging.info("🧹 Step 2: Cleaning and transforming daily CSV...")
     clean_daily_csv()
+    logging.info("✅ Data cleaned and saved as daily CSV.")
+
+    logging.info("☁️ Step 3: Uploading cleaned CSV to Google Cloud Storage...")
     upload_to_gcs()
+    logging.info("✅ File successfully uploaded to GCS bucket.")
+
+    logging.info("🗄️ Step 4: Loading file into BigQuery table...")
     load_csv_to_bigquery()
-    logging.info("✅ Pipeline completed successfully.")
+    logging.info("✅ Data successfully loaded into BigQuery.")
+
+    logging.info("🎉 Pipeline completed successfully!")
 
 def entry_point(request: Request):
     """Cloud Function HTTP entry point"""
