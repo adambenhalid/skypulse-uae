@@ -46,3 +46,7 @@ def entry_point(request: Request):
     except Exception as e:
         logging.error(f"❌ Cloud Function failed: {e}")
         return jsonify({"status": "error", "message": str(e)}), 500
+
+# 👇 This part is missing in your version
+if __name__ == "__main__":
+    run_pipeline()
