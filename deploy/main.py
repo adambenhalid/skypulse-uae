@@ -1,5 +1,10 @@
+import sys
+import os
 import logging
 from flask import jsonify, Request
+
+# 👇 Add the deploy/ folder to Python's search path
+sys.path.append(os.path.dirname(__file__))
 
 from fetch_data import fetch_and_save_data
 from clean_transform import clean_daily_csv
